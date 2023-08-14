@@ -47,7 +47,7 @@ var Category=require('./Schemas/CategorySchema')
 
   router.post('/:id/update', getCategory, async (req, res) => {
     try {
-      res.category.name = req.body.categoryName;
+      res.category.categoryName = req.body.categoryName;
       await res.category.save();
       return  res.status(200).json({status:true});
     } catch (err) {
